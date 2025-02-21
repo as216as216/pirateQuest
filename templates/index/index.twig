@@ -1,0 +1,35 @@
+{{ a }}
+
+{#{% if not sess().isAuth() %}#}
+{#    {{ portal().renderStaticTpl('common/modal/login.twig') }}#}
+{#{% else %}#}
+<section class="admin">
+    <div class="container">
+        <h2 class="admin__title">
+            Личный кабинет {{ {
+                'admin': 'администратора',
+                'controler': 'контролёра',
+                'student': 'студента'
+            }[user.role] }}
+        </h2>
+{#        {% if user.role == 'student' %}#}
+{#            {% include "privateCab/student.twig" %}#}
+{#        {% endif %}#}
+
+        {% if user.role == 'admin' %}
+            <div class="window">
+                <div class="admin__student-snils">
+                    <h4 class="admin__text">Поиск студента по СНИЛС</h4>
+                    <form action="/getAllStudentInfo" method="post" id="search-form" accept-charset="UTF-8">
+                        <div class="input-wth-btn">
+                            <input class="admin__input snils" type="text" id="snils" name="snils" size="14" placeholder="СНИЛС">
+                            <button class="admin__btn in-input" type="submit" data-connect="submit">Поиск</button>
+                        </div>
+                        <p class="form_msg" data-connect="submit"></p>
+                    </form>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+{#    {% endif %}#}

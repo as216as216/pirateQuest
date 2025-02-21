@@ -1,0 +1,40 @@
+{#{{ headStyle() }}#}
+{#{{ headScript() }}#}
+
+<h1>Вступительное видео квеста</h1>
+
+<div>
+    <video src="/app/pirate/media/jack.mp4" controls width="30%"></video>
+</div>
+a = {{ a }}
+
+<div>
+    Вот мое первое задание на проверку твоей пиратской сноровки, и я посмотрю, хватит ли у тебя сил на поиски сокровищ. Ты должен ТОЧНО посчитать, сколько ступенек в твоем доме. И это число будет первой частью кода. Вторая часть кода  это количество черных меток на приглашении, внизу которого изображены ШТУРВАЛ, ЧЕРЕП, ЯКОРЬ. Соедини два этих числа и ты получишь код, который и будет ответом на это задание
+</div>
+
+{#<div>#}
+{#    <form>#}
+
+{#    </form>#}
+{#</div>#}
+
+
+<form method="post" action="/verify2" id="answer1f" enctype="application/x-www-form-urlencoded">
+    <div class="form-group">
+        <input type="hidden" id="question" name="question" value="1">
+        <label for="answer1">Ответ: </label>
+        <input type="text" id="answer" name="answer" required="true" class="form-control">
+
+        <button id="submit" name="submit" type="submit" class="btn btn-primary main" value="submit">Отправить &nbsp; <i class="fa fa-chevron-circle-right"></i></button>
+    </div>
+</form>
+
+{#<script src="/libs/jquery/jquery3.min.js"></script>#}
+{#<script src="/app/pirate/assets/js/main.js"></script>#}
+<section>
+    <footer>
+{{ resourcebundle('pirate') }}
+{{ headScript() }}
+{{ headStyle() }}
+    </footer>
+</section>

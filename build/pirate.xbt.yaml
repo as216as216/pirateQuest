@@ -1,0 +1,16 @@
+app: pirate
+randomVer: true
+sourcemap: false
+output: webapps/pirate/public/build/
+#extend:
+#  - bootstrap5
+#  - fontawesome5
+css:
+  - $app/assets/css/custom.css
+js:
+  - /libs/jquery/jquery.js
+#  - $app/assets/js/jquery.maskedinput.min.js
+  - $app/assets/js/main.js
+#  - $app/public/assets/js/main.js
+  - /webapps/pirate/public/assets/js/main.js
+#  - /webapps/pirate/assets/js/main.js

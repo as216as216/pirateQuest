@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+{% use "_head.twig" with _head as _head1 %}
+{% use "_footer.twig" with _footer as _footer1 %}
+{#{% use "logoContent.twig" with logoContent as logoContent1 %}#}
+
+<head>
+    {% block _head %}
+        {{ block('_head1') }}
+    {% endblock %}
+</head>
+
+<body>
+{#{% block logoContent %}#}
+{#    {{ block('logoContent1') }}#}
+{#{% endblock %}#}
+
+{% block content %}
+    {{ content }}
+{% endblock %}
+
+{% block _footer %}
+    {{ block('_footer1') }}
+{% endblock %}
+</body>
+</html>

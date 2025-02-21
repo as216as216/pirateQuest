@@ -1,0 +1,9 @@
+parent: x1db
+development:
+  namespace: pirate
+  annotations:
+    ignore_dirs:
+      - ^public/assets
+
+production:
+  _extend: development
