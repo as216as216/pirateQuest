@@ -2,7 +2,7 @@
 <html lang="ru" class="dark">
 {% use "_head.twig" with _head as _head1 %}
 {% use "_footer.twig" with _footer as _footer1 %}
-{#{% use "logoContent.twig" with logoContent as logoContent1 %}#}
+{% use "logoContent.twig" with logoContent as logoContent1 %}
 
 <head>
     {% block _head %}
@@ -10,10 +10,10 @@
     {% endblock %}
 </head>
 
-<body>
-{#{% block logoContent %}#}
-{#    {{ block('logoContent1') }}#}
-{#{% endblock %}#}
+<body class="body_image">
+{% block logoContent %}
+    {{ block('logoContent1') }}
+{% endblock %}
 
 {% block content %}
     {{ content }}

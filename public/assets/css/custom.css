@@ -1,3 +1,72 @@
-.main {
-    background-color: #0a53be;
+.header {
+    /*padding: 20px 0;*/
+    height: 100px; /* 200 лучше*/
+    background-image: url("/app/pirate/images/header.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+}
+
+.header__title {
+    font-size: 20px;
+    font-family: 'Scada', sans-serif;
+    font-weight: 700;
+    color: #e5cd92;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* не работает */
+    font-size: 30px;
+    text-align: center;
+}
+
+.body_image {
+    /*background-image: url("/app/pirate/images/body.webp");*/
+    background-image: url("/app/pirate/images/body_full.webp");
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
+}
+
+.video_div {
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    margin: 0 auto;
+    width: 65%;
+    font-size: 22px;
+    font-family: 'Scada', sans-serif;
+    font-weight: 700;
+    color: #e5cd92;
+}
+
+.question_area {
+    background-color: transparent; /* Прозрачный фон */
+    width: 65%;
+    font-size: 22px;
+    font-family: 'Scada', sans-serif;
+    font-style: italic; /* Курсивное начертание */
+    font-weight: 700;
+    color: #e5cd92;
+    width: calc(100% - 20px); /* Учитываем margin */
+    height: 200px;
+    margin: 10px; /* Внешние отступы */
+    box-sizing: border-box; /* Учитываем padding и border */
+    border-color: #a4864b;
+}
+
+.btn_send {
+    background-color: #0f131a;
+    color: #e5cd92;
+    border: 2px solid #685b4a;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+    font-style: italic; /* Курсивное начертание */
+}
+
+.btn_send:hover {
+    background-color: #323f57;; /* Темно-зеленый фон при наведении */
 }
