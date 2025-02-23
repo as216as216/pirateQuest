@@ -12,6 +12,41 @@ class VerifyController extends Controller {
     public function init() {
         \X1\DI::get('layout')->setTemplate('main.twig');
     }
+
+    /**
+     * @route /nextQuestion/:question
+     * @return void
+     */
+    public function nextQuestion() {
+        $question = $this->httpRequest->getParam('question');
+        if (!empty($question)) {
+            switch ($question) {
+                case 1:
+                    $questText = 'Вот мое первое задание на проверку твоей пиратской сноровки, и я посмотрю, хватит ли у тебя сил на поиски сокровищ. Ты должен ТОЧНО посчитать, сколько ступенек в твоем доме. И это число будет первой частью кода. Вторая часть кода  это количество черных меток на приглашении, внизу которого изображены ШТУРВАЛ, ЧЕРЕП, ЯКОРЬ. Соедини два этих числа и ты получишь код, который и будет ответом на это задание.';
+                    $clueText = '';
+                    break;
+                case 2:
+                    $trueAnswer = '';
+                    break;
+                case 3:
+                    $trueAnswer = '';
+                    break;
+                case 4:
+                    $trueAnswer = '';
+                    break;
+                case 5:
+                    $trueAnswer = '';
+                    break;
+                case 6:
+                    $trueAnswer = '';
+                    break;
+            }
+        }
+
+        $this->view->questText = $questText;
+        $this->view->questNum = $question;
+    }
+
     /**
      * @route /
      * @return void

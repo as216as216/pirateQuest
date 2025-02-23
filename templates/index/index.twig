@@ -1,32 +1,11 @@
 <section class="admin">
     <div class="container">
         <div class="div_content">
-            <h2 id="quetsionTitle">Задание №1</h2>
+            <h2 id="quetsionTitle">Вступление</h2>
             <div class="video_div">
-                <video src="/app/pirate/media/jack.mp4" controls width="30%"></video>
+                <video src="/app/pirate/media/intro.mp4" controls class="video_player"></video>
             </div>
-            <textarea id="story" name="story" class="question_area">
-                «Вот мое первое задание на проверку твоей пиратской сноровки, и я посмотрю, хватит ли у тебя сил на поиски сокровищ. Ты должен ТОЧНО посчитать, сколько ступенек в твоем доме. И это число будет первой частью кода. Вторая часть кода  это количество черных меток на приглашении, внизу которого изображены ШТУРВАЛ, ЧЕРЕП, ЯКОРЬ. Соедини два этих числа и ты получишь код, который и будет ответом на это задание».
-            </textarea>
-
-            <form method="post" action="/verify2" id="answer_form" enctype="application/x-www-form-urlencoded">
-                <div class="form-group">
-                    <input type="hidden" id="question" name="question" value="1">
-                    <label for="answer1">Ответ: </label>
-                    <div class="input-group mb-3">
-                    <input type="text" id="answer" name="answer" required="true" class="form-control">
-                    <button id="submit" name="submit" type="submit" class="btn_send" value="submit">Отправить &nbsp;<i class="fa fa-chevron-circle-right"></i></button>
-                    </div>
-                </div>
-            </form>
-
-            <div id="errors_div" class="alert alert-danger visually-hidden">
-                Неверный ответ!
-            </div>
-
-            <div id="success_div" class="alert alert-success visually-hidden">
-                Да, правильно!
-            </div>
+            <a href="/verify/nextQuestion/1" class="btn btn_send">Начать</a>
         </div>
     </div>
 </section>

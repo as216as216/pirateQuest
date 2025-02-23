@@ -3,12 +3,13 @@
         <div class="div_content">
             <h2>Правильно!</h2>
             <div class="video_div">
-                <video src="/app/pirate/media/goodAnswer{{ questionNumber }}.mp4" controls width="30%"></video>
+                <video src="/app/pirate/media/goodAnswer{{ questionNumber }}.mp4" controls class="video_player"></video>
             </div>
 
             <div class="question">
                 <p>{{ clue }}</p>
             </div>
+            <a href="/verify/nextQuestion/{{ questionNumber+1 }}" class="btn btn_send">Дальше</a>
         </div>
     </div>
 </section>

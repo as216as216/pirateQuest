@@ -40,6 +40,10 @@
     align-items: center;
 }
 
+.video_player {
+    width: 38%;
+}
+
 .question_area {
     background-color: transparent; /* Прозрачный фон */
     width: 65%;

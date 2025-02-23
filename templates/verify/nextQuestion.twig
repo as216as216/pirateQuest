@@ -1,0 +1,32 @@
+<section class="admin">
+    <div class="container">
+        <div class="div_content">
+            <h2 id="quetsionTitle">Задание №1</h2>
+            <div class="video_div">
+                <video src="/app/pirate/media/question{{ questNum }}.mp4" controls class="video_player"></video>
+            </div>
+            <textarea id="story" name="story" class="question_area">
+                {{ questText }}
+            </textarea>
+
+            <form method="post" id="answer_form" enctype="application/x-www-form-urlencoded">
+                <div class="form-group">
+                    <input type="hidden" id="question" name="question" value="{{ questNum }}">
+                    <label for="answer">Ответ: </label>
+                    <div class="input-group mb-3">
+                    <input type="text" id="answer" name="answer" required="true" class="form-control" placeholder="Введите ответ">
+                    <button id="submit" name="submit" type="submit" class="btn_send" value="submit">Отправить &nbsp;<i class="fa fa-chevron-circle-right"></i></button>
+                    </div>
+                </div>
+            </form>
+
+            <div id="errors_div" class="alert alert-danger visually-hidden">
+                Неверный ответ!
+            </div>
+
+            <div id="success_div" class="alert alert-success visually-hidden">
+                Да, правильно!
+            </div>
+        </div>
+    </div>
+</section>
