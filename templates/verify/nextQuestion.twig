@@ -1,7 +1,7 @@
 <section class="admin">
     <div class="container">
         <div class="div_content">
-            <h2 id="quetsionTitle">Задание №1</h2>
+            <h2 id="quetsionTitle">Задание №{{ questNum }}</h2>
             <div class="video_div">
                 <video src="/app/pirate/media/question{{ questNum }}.mp4" controls class="video_player"></video>
             </div>
@@ -15,7 +15,7 @@
                     <label for="answer">Ответ: </label>
                     <div class="input-group mb-3">
                     <input type="text" id="answer" name="answer" required="true" class="form-control" placeholder="Введите ответ">
-                    <button id="submit" name="submit" type="submit" class="btn_send" value="submit">Отправить &nbsp;<i class="fa fa-chevron-circle-right"></i></button>
+                    <button id="submit" name="submit" type="submit" class="btn_send" value="submit">Проверить &nbsp;<i class="fa fa-chevron-circle-right"></i></button>
                     </div>
                 </div>
             </form>
