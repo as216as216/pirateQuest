@@ -24,20 +24,20 @@
     background-repeat: no-repeat;
 }
 
-.video_div {
-    padding-top: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.question {
+.div_content {
     margin: 0 auto;
-    width: 65%;
+    padding-top: 170px;
+
     font-size: 22px;
     font-family: 'Scada', sans-serif;
     font-weight: 700;
     color: #e5cd92;
+}
+
+.video_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .question_area {
@@ -69,4 +69,8 @@
 
 .btn_send:hover {
     background-color: #323f57;; /* Темно-зеленый фон при наведении */
+}
+
+p {
+    text-indent: 30px;
 }

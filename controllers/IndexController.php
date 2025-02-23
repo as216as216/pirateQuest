@@ -21,14 +21,14 @@ class IndexController extends Controller {
         $a = 51;
         $this->view->a = $a;
     }
-
-    /**
-     * @route /verify
-     * @return void
-     */
-    public function verify() {
-        $params = $this->httpRequest->getParams();
-        $a = 5;
-    }
+//
+//    /**
+//     * @route /verify
+//     * @return void
+//     */
+//    public function verify() {
+//        $params = $this->httpRequest->getParams();
+//        $a = 5;
+//    }
 
 }

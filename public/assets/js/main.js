@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    console.log('Ееее, Нигга!');
     $('#submit').on('click',function (e) {
-        var formData = $('#filter-form').serializeArray();
+        var formData = $('#answer_form').serializeArray();
+        var questionNumber = $("#question").val();
         e.preventDefault();
         $.ajax({
             type: 'post',
@@ -12,14 +12,19 @@ $(document).ready(function () {
             //     $('.progs_content').addClass('loading');
             // },
             success: function (res) {
-                console.log("УУдача!")
-                console.log(res['valid'])
-                // $('.progs_content').removeClass('loading');
-                // let items = $('.progs_item');
-                // items.each(function () {
-                //     $(this).css('display','none');
-                // });
-
+                console.log("Удача!");
+                console.log(res.success);
+                if (res.success == 'true') {
+                    $("#success_div").removeClass('visually-hidden');
+                    $("#errors_div").addClass('visually-hidden');
+                    setTimeout(function() {
+                        window.location.href = "/verify/goodAnswer/" + questionNumber; // Переадресация на другую страницу
+                    }, 1000);
+                }
+                else {
+                    $("#success_div").addClass('visually-hidden');
+                    $("#errors_div").removeClass('visually-hidden');
+                }
             },
             error: function (res) {
                 let response=JSON.decode(res.responseText);

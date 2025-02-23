@@ -2,8 +2,8 @@ app: pirate
 randomVer: true
 sourcemap: false
 output: webapps/pirate/public/build/
-#extend:
-#  - bootstrap5
+extend:
+  - bootstrap5
 #  - fontawesome5
 css:
   - $app/assets/css/custom.css
