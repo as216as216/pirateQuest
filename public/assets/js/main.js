@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#submit').on('click',function (e) {
+    $('#btn_send_aswer').on('click',function (e) {
         var formData = $('#answer_form').serializeArray();
         var questionNumber = $("#question").val();
         e.preventDefault();
@@ -8,9 +8,6 @@ $(document).ready(function () {
             url: '/verify/',
             data: formData,
             async: false,
-            // beforeSend: function() {
-            //     $('.progs_content').addClass('loading');
-            // },
             success: function (res) {
                 console.log("Удача!");
                 console.log(res.success);
@@ -32,5 +29,4 @@ $(document).ready(function () {
             }
         });
     });
-
 });

@@ -9,7 +9,11 @@
             <div class="question">
                 <p>{{ clue }}</p>
             </div>
-            <a href="/verify/nextQuestion/{{ questionNumber+1 }}" class="btn btn_send">Дальше</a>
+            {% if questionNumber < 5 %}
+                <a href="/verify/nextQuestion/{{ questionNumber+1 }}" class="btn btn_send">Дальше</a>
+            {% else %}
+                <a href="/" class="btn btn_send">В начало</a>
+            {% endif %}
         </div>
     </div>
 </section>

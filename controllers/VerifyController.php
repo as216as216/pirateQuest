@@ -57,10 +57,11 @@ class VerifyController extends Controller {
     public function index() {
         $question = $this->httpRequest->getParam('question');
         $playerAnswer = $this->httpRequest->getParam('answer');
+        $isFinal = false;
         if (!empty($question)) {
             switch ($question) {
                 case 1:
-                    $trueAnswer = '111';
+                    $trueAnswer = '173';
                     break;
                 case 2:
                     $trueAnswer = '143701901635';
@@ -75,12 +76,14 @@ class VerifyController extends Controller {
                     $trueAnswer = 'трех слонов';
                     break;
                 case 6:
-                    $trueAnswer = '';
+                    $trueAnswer = 'энциклопедия';
                     break;
             }
         }
 
-        $success = ($playerAnswer == $trueAnswer and !empty($trueAnswer)) ? 'true' : 'false';
+        $playerAnswer = mb_strtolower($playerAnswer);
+        $playerAnswer = str_replace('ё', 'е', $playerAnswer);
+        $success = (($playerAnswer == $trueAnswer) and !empty($trueAnswer)) ? 'true' : 'false';
         return $this->sendJson(['success' => $success]);
     }
 
@@ -108,11 +111,11 @@ class VerifyController extends Controller {
                     $clueText = 'Да ты молодец! Сам черт не нашел бы эту черную метку во всем белом свете. Из тебя получается отличный пират! Ну хорошо, хорошо, не буду утомлять тебя своей бессмысленными речами, часть карты спрятана у тебя под домиком.';
                     break;
                 case 5:
-                    $clueText = 'Вот это да!!! С твоей помощью я стал еще богаче чем раньше! Конечно мне придется еще поискать эти сокровища на остове, но у меня просто нюх на золотишко и я быстро его найду! Ах, да, ты хочешь узнать где часть карты ? Ммм.. дай-ка  подумать, кажется, я спрятал ее в почтовом ящике.';
+                    $clueText = 'Вот это да! Ты прошел все задания и нашел последнюю часть карты ? Ха- ха- ха, но она же пуста! Лишь сообразительный пират сможет разглядеть подсказку, где же находятся сокровища…';
                     break;
-                case 6:
-                    $clueText = '';
-                    break;
+//                case 6:
+//                    $clueText = '';
+//                    break;
             }
 
             $this->view->clue = $clueText;
